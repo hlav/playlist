@@ -1,0 +1,100 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid black;
+  /*padding: 1%;*/
+  /*margin: .5%;*/
+}
+header{
+  border: 1px solid red;
+  position: absolute;
+  width: 100vw;
+  height: 50px;
+  background-color: grey;
+  z-index: 99;
+}
+button{
+    height: 50px;
+    width: 175px;
+    border-top: 1px solid #96d1f8;
+    background: #536069;
+    background: -webkit-gradient(linear, left top, left bottom, from(#252b30), to(#536069));
+    background: -webkit-linear-gradient(top, #252b30, #536069);
+    background: -moz-linear-gradient(top, #252b30, #536069);
+    background: -ms-linear-gradient(top, #252b30, #536069);
+    background: -o-linear-gradient(top, #252b30, #536069);
+    padding: 15.5px 31px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 16px;
+    font-family: Lucida Grande, serif;
+    text-decoration: none;
+    vertical-align: middle;
+
+}
+
+section{
+display: flex;
+flex-direction: column;
+/*justify-content: center;*/
+align-items: center;
+float: left;
+background-color: #F2F2F2;
+height: 95vh;
+width: 50vw;
+font-family: Lucida Grande, serif;
+color: purple;
+font-size: 40px;
+}
+
+section span{
+margin-top: 200px;
+margin-bottom: 20px;
+/*align-self: center;*/
+
+}
+aside{
+display: flex;
+flex-direction: column;
+align-items: center;
+float: left;
+height: 90vh;
+width: 50vw;
+padding-bottom: 50px;
+}
+
+.trips{
+margin-top: 10%;
+/*margin-bottom: 10%;*/
+color: black;
+height: 30vh;
+width: 200px;
+border: 1px solid brown;
+
+}
+
+aside img{
+position: absolute;
+border: 2px solid orange;
+width: 100vh;
+height: 98vh;
+opacity: .19;
+}
+
+footer{
+  font-family: helvetica;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  width: 100vw;
+  height: 50px;
+  background-color: grey;
+  border: 1px solid blue;
+  bottom: 0;
+}
