@@ -1,3 +1,7 @@
+
+
+
+
 var jaxx = $.ajax({
 url: "https://lit-fortress-6467.herokuapp.com/object",
 method: "GET",
@@ -16,7 +20,7 @@ jaxx.done(function(response) {
   var drilldown = response.results;
   for (var i = 0; i < drilldown.length; i++) {
     // albums.push("<li class='flex-item' id='alb" + i + "'><img src ='images/"+drilldown[i].cover_art +"'/></li>");
-    albums.push("<li class='flex-item' id='" + drilldown[i]["id"] + "'><img src ='images/"+drilldown[i].cover_art +"'/></li>");
+    albums.push("<li class='flex-item' id='" + drilldown[i]["id"] + "'><img src ='images/"+drilldown[i].cover_art +"'/><a href='#'></li>");
 
   $(".flex-container").append(albums[i]);
   console.log(albums[i]);}
@@ -44,14 +48,30 @@ $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=
 $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=' + linkTwo +  '></span>');
 $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=' + linkThree +  '></span>');
 
+$("#2").click(function(){
+$("#selectedBin").append(drilldown[0]["artist"] + ", " + drilldown[0]["title"] + "<br>" ) });
+$("#6").click(function(){
+$("#selectedBin").append(drilldown[1]["artist"] + ", " + drilldown[1]["title"] + "<br>" ) });
+
+$("#22").click(function(){
+$("#selectedBin").append(drilldown[2]["artist"] + ", " + drilldown[2]["title"]+ "<br>" ) });
+
+$("#18").click(function(){
+$("#selectedBin").append(drilldown[3]["artist"] + ", " + drilldown[3]["title"] + "<br>") });
+$("#55").click(function(){
+$("#selectedBin").append(drilldown[4]["artist"] + ", " + drilldown[4]["title"] + "<br>") });
 
 });
 
 
-$("#55").click(function() {
-    $(".albumThumb").css("background-color", "red");}
-  )
 
+
+// $("document").click(function() {console.log("hi");})
+
+  //
+  // $("ul li").click(function(){
+  //   alert("hello");
+  // });
 
 var jaxxp = $.ajax({
   url: "https://lit-fortress-6467.herokuapp.com/post",
