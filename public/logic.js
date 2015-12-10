@@ -7,6 +7,9 @@ url: "https://lit-fortress-6467.herokuapp.com/object",
 method: "GET",
 dataType: "json" });
 
+var container = [];
+
+
 var imgOne = Math.random()
 var imgTwo = Math.random()
 var imgThree = Math.random()
@@ -48,30 +51,37 @@ $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=
 $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=' + linkTwo +  '></span>');
 $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=' + linkThree +  '></span>');
 
+
 $("#2").click(function(){
-$("#selectedBin").append(drilldown[0]["artist"] + ", " + drilldown[0]["title"] + "<br>" ) });
+$("#selectedBin").append(drilldown[0]["artist"] + ", " + drilldown[0]["title"] + "<br>" )
+container.push(drilldown[0]["title"]); });
 $("#6").click(function(){
-$("#selectedBin").append(drilldown[1]["artist"] + ", " + drilldown[1]["title"] + "<br>" ) });
+$("#selectedBin").append(drilldown[1]["artist"] + ", " + drilldown[1]["title"] + "<br>" )
+container.push(drilldown[1]["title"]); });
 
 $("#22").click(function(){
-$("#selectedBin").append(drilldown[2]["artist"] + ", " + drilldown[2]["title"]+ "<br>" ) });
-
+$("#selectedBin").append(drilldown[2]["artist"] + ", " + drilldown[2]["title"]+ "<br>" );
+container.push(drilldown[2]["title"]);});
 $("#18").click(function(){
-$("#selectedBin").append(drilldown[3]["artist"] + ", " + drilldown[3]["title"] + "<br>") });
+  $("#selectedBin").append(drilldown[3]["artist"] + ", " + drilldown[3]["title"] + "<br>")
+container.push(drilldown[3]["title"]);});
 $("#55").click(function(){
-$("#selectedBin").append(drilldown[4]["artist"] + ", " + drilldown[4]["title"] + "<br>") });
+  $("#selectedBin").append(drilldown[4]["artist"] + ", " + drilldown[4]["title"] + "<br>");
+  container.push(drilldown[4]["title"]);
+console.log(container);
 
 });
 
 
 
+});
+$("#subBin").click(function(){
+  console.log(container);
 
-// $("document").click(function() {console.log("hi");})
+})
 
-  //
-  // $("ul li").click(function(){
-  //   alert("hello");
-  // });
+
+
 
 var jaxxp = $.ajax({
   url: "https://lit-fortress-6467.herokuapp.com/post",

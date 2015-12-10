@@ -1,5 +1,5 @@
-body{padding: 2px;
-width: 90vw;}
+html{padding: 2px;
+width: 80vw;}
 header{
   margin: 0px 10px 10px -10px;
   width: 100vw;
@@ -19,13 +19,14 @@ top: 100px;
 }
 
 .albumThumb{
+  width: auto;
   height: 20vh;
   border: 1px solid black;
 }
 
 
 .flex-container {
-  padding: 10;
+  /*padding-right: 10px;*/
   margin: 0;
   list-style: none;
 
@@ -36,7 +37,7 @@ top: 100px;
   display: flex;
 
   -webkit-flex-flow: row wrap;
-  justify-content:space-around;
+  justify-content: center;
 }
 /*.flex-container{
 background-color: purple;
@@ -73,7 +74,6 @@ height: inherit;
 .playlistBin{
   height: 40vh;
   margin-top: 5px;
-  border: 2px dotted pink;
 
 }
 
