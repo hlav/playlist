@@ -1,12 +1,11 @@
 body{
   height: 100vh;
   width: 100vw;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   /*padding: 1%;*/
   /*margin: .5%;*/
 }
 header{
-  border: 1px solid red;
   position: absolute;
   width: 100vw;
   height: 50px;
@@ -70,16 +69,27 @@ padding-bottom: 50px;
 }
 
 .trips{
+display: flex;
+flex-direction: column;
+justify-content:space-around;
+align-items: center;
 margin-top: 10%;
-/*margin-bottom: 10%;*/
+margin-bottom: 10%;
 color: black;
-height: 30vh;
+height: 80vh;
 width: 200px;
-border: 1px solid brown;
 
 }
 
-aside img{
+.trips span{
+  flex-basis: auto;
+  /*display: block;*/
+  /*height: inherit;*/
+  /*width: inherit;*/
+  opacity: 1;
+}
+
+#background{
 position: absolute;
 border: 2px solid orange;
 width: 100vh;
@@ -90,7 +100,7 @@ opacity: .19;
 footer{
   font-family: helvetica;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   position: absolute;
   width: 100vw;
   height: 50px;
