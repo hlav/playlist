@@ -4,11 +4,19 @@ method: "GET",
 dataType: "json"
 
 });
-var arr = [];
 
 jaxx.done(function(response) {
 
-var drilldown = response.results;
+  var drilldown = response.results;
+  var albums = [];
+  for (var i = 0; i < drilldown.length; i++) {
+    albums.push("<li class='flex-item' id='alb" + i + "'><img src ='images/"+drilldown[i].cover_art +"'/></li>");
+    // $(".flex-item").append(albums[i]);
+  $(".flex-container").append(albums[i]);
+  }
+
+
+console.log(albums);
 
 var imgOne = Math.random()
 var imgTwo = Math.random()
@@ -65,23 +73,3 @@ $(".trips").append('<span><img height= 150px width =150px class="'+ 'i' +'" src=
 // })
 //
 // jaxxp.done(console.log("successful post"))
-
-
-//
-//
-// $("#trigger").click(function(){
-//   var link = "";
-//   var rando = Math.random();
-//   if (rando <= .33) {
-//     link = collection.images[0]["image_src"]
-//
-//   }
-//   else if (rando > .33 && rando < .66) {
-//     link = collection.images[1]["image_src"]
-//
-//   }
-//   else {
-//   link = collection.images[2]["image_src"]
-//   }
-//
-//   $("#container").append('<img class="fox" src=' + link +  '>')
